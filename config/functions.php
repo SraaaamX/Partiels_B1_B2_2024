@@ -1,0 +1,1 @@
+<?php //fichier : config/functions.php

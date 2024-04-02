@@ -1,0 +1,42 @@
+movies:
+    id              INT PRIMARY KEY AI
+    created         DATETIME default:CURRENT_TIMESTAMP
+    modified        DATETIME default:CURRENT_TIMESTAMP update:CURRENT_TIMESTAMP
+    (les 3 cases du dessus sont à mettre à chaque fois)
+
+
+    title           CHAR(150)   
+    director        CHAR(150)           NULL
+    synopsis        VARCHAR(1000)       NULL
+    releasedate     DATE                NULL
+    duration        TIME                NULL
+    poster          CHAR(50)            NULL
+    genre           CHAR(100)           NULL
+
+table: quotes
+    id              INT PRIMARY KEY AI
+    created         DATETIME default:CURRENT_TIMESTAMP
+    modified        DATETIME default:CURRENT_TIMESTAMP update:CURRENT_TIMESTAMP
+   
+   
+    author          CHAR(100) NULL
+    content         VARCHAR(500)
+    releasedate     DATE NULL
+
+people:
+    id              INT PRIMARY KEY AI
+    created         DATETIME default:CURRENT_TIMESTAMP
+    modified        DATETIME default:CURRENT_TIMESTAMP update:CURRENT_TIMESTAMP
+    
+    
+    name            CHAR(60)
+    movie_id        INT
+
+users:
+    id              INT PRIMARY KEY AI
+    created         DATETIME default:CURRENT_TIMESTAMP
+    modified        DATETIME default:CURRENT_TIMESTAMP update:CURRENT_TIMESTAMP
+
+
+    username        CHAR(20)
+    password        CHAR(128)
